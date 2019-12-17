@@ -1,0 +1,13 @@
+- name: Install entropy service
+  become: yes
+  pacman:
+    name:
+      - rng-tools 
+      - opensc 
+
+- name: Enable entropy service
+  become: yes
+  systemd:
+    enabled: yes
+    state: started
+    name: rngd

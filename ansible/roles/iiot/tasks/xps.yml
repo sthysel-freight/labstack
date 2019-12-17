@@ -1,0 +1,14 @@
+- name: Touchpad config on XPS 13
+  become: yes
+  when: ansible_facts['product_name'] == "XPS 13 9350"
+  copy:
+    dest: "/etc/X11/xorg.conf.d/30-touchpad.conf"
+    content: | 
+        Section "InputClass"
+            Identifier "DLL0704:01 06CB:76AE Touchpad"
+            MatchIsTouchpad "on"
+            Driver "libinput"
+            Option "Tapping" "on"
+            Option "Natural Scrolling" "on"
+            Option "Accel Speed" "1"
+        EndSection

@@ -1,0 +1,14 @@
+- name: Main CARBS user
+  become: yes
+  user:
+    name: "{{carbs_user}}"
+    groups: wheel, docker
+    append: yes
+    shell: /bin/zsh
+
+- name: Backup CARBS user
+  become: yes
+  user:
+    name: bro
+    groups: wheel
+    append: yes

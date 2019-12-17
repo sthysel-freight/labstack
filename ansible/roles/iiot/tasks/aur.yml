@@ -1,0 +1,36 @@
+- name: Add AUR user
+  become: yes
+  user:
+    name: aur_builder
+    group: wheel
+
+- name: Restrict AUR user
+  become: yes
+  lineinfile:
+     path: /etc/sudoers.d/aur_builder-allow-to-sudo-pacman
+     state: present
+     line: "aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman"
+     validate: /usr/sbin/visudo -cf %s
+     create: yes
+
+- name: Install yay 
+  become: yes
+  become_user: aur_builder
+  aur:
+    name: yay
+    use: makepkg
+    skip_installed: true
+
+- name: Install ansible-aur on node, it should already be on master, turtles all the way
+  become: yes
+  become_user: aur_builder
+  aur:
+    name: ansible-aur
+    skip_installed: true
+
+- name: vtop
+  become: yes
+  become_user: aur_builder
+  aur:
+    name: vtop
+    skip_installed: true

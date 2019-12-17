@@ -1,0 +1,6 @@
+- name: Install editor
+  become: yes
+  pacman:
+    name:
+      - neovim
+    state: present
