@@ -1,12 +1,12 @@
-- name: Main CARBS user
+- name: Main IIOT user
   become: yes
   user:
-    name: "{{carbs_user}}"
+    name: "{{iiot_user}}"
     groups: wheel, docker
     append: yes
     shell: /bin/zsh
 
-- name: Backup CARBS user
+- name: Backup IIOT user
   become: yes
   user:
     name: bro
