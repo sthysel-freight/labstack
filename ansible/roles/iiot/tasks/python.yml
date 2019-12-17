@@ -7,9 +7,3 @@
       - python-virtualenvwrapper
     state: present
 
-- name: microsoft's python lsp server
-  become: yes
-  become_user: aur_builder
-  aur:
-    name: microsoft-python-language-server
-    skip_installed: true
