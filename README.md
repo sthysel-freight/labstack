@@ -1,7 +1,10 @@
 # LABStack (Version 0.0.1)
 
-Raspberry Pi 4.0 running Arch arm with a predominantly docker hosted stack of
-usefull LAB IIOT Tools.
+Raspberry Pi 4.0 running Arch ARM with a predominantly docker hosted stack of
+usefull LAB IIOT Tools. 
+
+- ansible is used to prep the pi for docker and keep things tight
+- docker-compose is used to maintain the service stack
 
 
 ## Prep SD card
@@ -11,11 +14,25 @@ From
 install Arch on SD Card.
 
 
-## Quick env prep
+## Bootstrap the basics on the pi
+
+Boot the pi, find it on the local LAN `$ nmap -sn 10.0.0.1/24`, its called
+`alarmpi`, user `alarm`, root password is `root`, change if so inclined.
+
+ssh to `alarmpi`
+
+ - make a user, say `thys`
+ - add `thys` to wheel using `visudo`
+
+Like so:
 
 ```
 # pacman -Syyu
-# pacman -S sudo git vim tree docker
 # useradd -G wheel -m thys
+# pacman -S sudo vim
 # visudo
 ```
+
+## Run ansible over pi
+
+In the `ansible` run `play $PI_IP`
