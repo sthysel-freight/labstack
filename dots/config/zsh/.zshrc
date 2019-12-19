@@ -8,4 +8,3 @@ compinit
 
 # Include hidden files in autocomplete:
 _comp_options+=(globdots)
-~
