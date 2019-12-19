@@ -13,7 +13,7 @@ services:
       - 9000:9000
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./data/portainer/data:/data
+      - ./volumes/data/portainer/data:/data
 
   influx:
     image: "influxdb:latest"
@@ -25,6 +25,13 @@ services:
     env_file:
       - ./influx/influx.env
     volumes:
-      - ./data/influx/data:/var/lib/influxdb
-      - ./backups/influx/db:/var/lib/influxdb/backup
+      - ./volumes/data/influx/data:/var/lib/influxdb
+      - ./volumes/backups/influx/db:/var/lib/influxdb/backup
 
+  telegraf:
+    image: telegraf
+    volumes:
+      - ./telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+    depends_on:
+      - influx
+      - mqtt
