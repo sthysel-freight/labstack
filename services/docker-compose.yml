@@ -47,3 +47,14 @@ services:
     volumes:
       - ./volumes/grafana/data:/var/lib/grafana
       - ./volumes/grafana/log:/var/log/grafana
+
+  nodered:
+    build: ./nodered/.
+    restart: unless-stopped
+    user: "0"
+    privileged: true
+    env_file: ./nodered/nodered.env
+    ports:
+      - 1880:1880
+    volumes:
+      - ./volumes/nodered/data:/data
