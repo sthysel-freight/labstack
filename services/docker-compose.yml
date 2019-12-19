@@ -23,7 +23,7 @@ services:
       - 8083:8083
       - 2003:2003
     env_file:
-      - ./services/influx/influx.env
+      - ./influx/influx.env
     volumes:
       - ./data/influx/data:/var/lib/influxdb
       - ./backups/influx/db:/var/lib/influxdb/backup
