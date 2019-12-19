@@ -1,11 +1,5 @@
 version: '3.4'
 services:
-  mqtt:
-    image: eclipse-mosquitto
-    restart: unless-stopped
-    expose:
-      - "1883"
-
   portainer:
     image: portainer/portainer
     restart: unless-stopped
@@ -14,6 +8,12 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./volumes/data/portainer/data:/data
+
+  mqtt:
+    image: eclipse-mosquitto
+    restart: unless-stopped
+    expose:
+      - "1883"
 
   influx:
     image: "influxdb:latest"
