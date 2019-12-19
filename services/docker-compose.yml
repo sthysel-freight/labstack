@@ -15,7 +15,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./data/portainer/data:/data
 
-  influxdb:
+  influx:
     image: "influxdb:latest"
     restart: unless-stopped
     ports:
