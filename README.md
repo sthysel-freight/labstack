@@ -28,6 +28,10 @@ LABStack running on server `labstack` provides
 | nodered   | MQTT message swicth            | http://labstack:1880 |
 
 
+![Portainer Dashboard](docs/pics/portainer-dash.png)
+
+![Portainer Containers](docs/pics/portainer-containers.png)
+
 # Install
 
 ## Prep SD card
