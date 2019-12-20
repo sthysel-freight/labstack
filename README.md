@@ -1,14 +1,18 @@
-# LABStack (Version 0.0.1)
+# FullStack (Version 0.0.1)
 
-LABStack is a IOT enabling collection of services and tools. It allows the user
-to get going with a full set of modern and convenient tools with very little
+![Full Stack Developer](docs/pics/fullstack.jpg)
+
+FullStack is a curated and managed collection of IoT services and tools. It
+allows the user to get going with current best-of-breed services with minimum
 effort.
 
-LABStack is intended to be deployed on a Raspberry Pi 3 or later running Arch
-ARM with a predominantly docker hosted stack of useful LAB IIOT Tools, but this
-is not a hard requirement. LABStack will work fine on Raspian as well. Arch ARM
+FullStack is intended to be deployed on a Raspberry Pi 3 or later running Arch
+ARM Linux. FullStack will work fine on Raspian as well. Arch ARM
 is preferred as it is more up to date and performant, and seems a better fit for
 a LAB environment, YMMV.
+
+All services are shipped and managed in docker containers with persistent data
+volumes.
 
 In short:
 
