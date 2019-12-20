@@ -14,13 +14,23 @@ a LAB environment, YMMV.
 All services are shipped and managed in docker containers with persistent data
 volumes.
 
+FullStack can be deployed as is on a existing linux machine with docker already
+installed by
+
+ - cloning this repo
+ - run `./up.sh` in the `services` directory
+ 
+This will download all the images and start the various stack services.
+
 In short:
 
 - ansible is used to prep the pi for docker and keep things tight
 - dotfiles to keep the pi environment sane
 - docker-compose is used to maintain the service stack
 
-Fulltack running on server `fullstack` provides
+# Services
+
+Fullstack running on server `fullstack` provides
 
 | Service   | Description                    | Port or URL          |
 |-----------|--------------------------------|----------------------|
@@ -30,6 +40,7 @@ Fulltack running on server `fullstack` provides
 | nodered   | MQTT message switch            | http://labstack:1880 |
 | mqtt      | MQTT Broker                    | 1883                 |
 | telegraf  | System metrics harvester       |                      |
+
 
 
 ## Portainer
