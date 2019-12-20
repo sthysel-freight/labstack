@@ -36,7 +36,7 @@ LABStack running on server `labstack` provides
 
 ## Nodered
 
-![PAT](docs/pics/nodered.png)
+![PAT](docs/pics/nodered-pat.png)
 
 # Install
 
