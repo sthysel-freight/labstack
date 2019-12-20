@@ -22,11 +22,6 @@ installed by
  
 This will download all the images and start the various stack services.
 
-In short:
-
-- ansible is used to prep the pi for docker and keep things tight
-- dotfiles to keep the pi environment sane
-- docker-compose is used to maintain the service stack
 
 # Services
 
@@ -53,7 +48,14 @@ Fullstack running on server `fullstack` provides
 
 ![PAT](docs/pics/nodered-pat.png)
 
-# Install
+# Scratch install
+
+In short:
+
+- install a fullstack host, something like a recent pi
+- ansible is used to prep the pi for docker and keep things tight
+- dotfiles to keep the pi environment sane
+- docker-compose is used to maintain the service stack
 
 ## Prep SD card
 
