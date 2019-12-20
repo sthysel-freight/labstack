@@ -20,16 +20,16 @@ In short:
 - dotfiles to keep the pi environment sane
 - docker-compose is used to maintain the service stack
 
-LABStack running on server `labstack` provides
+Fulltack running on server `fullstack` provides
 
 | Service   | Description                    | Port or URL          |
 |-----------|--------------------------------|----------------------|
 | portainer | Container management           | http://labstack:9000 |
-| mqtt      | MQTT Broker                    | 1883                 |
 | influx    | Time series database           | 8086/8083/2003       |
-| telegraf  | System metrics harvester       |                      |
 | grafana   | Time series data visualization | http://labstack:3000 |
 | nodered   | MQTT message switch            | http://labstack:1880 |
+| mqtt      | MQTT Broker                    | 1883                 |
+| telegraf  | System metrics harvester       |                      |
 
 
 ## Portainer
