@@ -5,10 +5,10 @@ to get going with a full set of modern and convenient tools with very little
 effort.
 
 LABStack is intended to be deployed on a Raspberry Pi 3 or later running Arch
-ARM with a predominantly docker hosted stack of usefull LAB IIOT Tools.
-
-LABStack will work fine on Raspian as well, Arch ARM is preferred as it is more
-up to date and performant, and seems a better fit for a LAB environment.
+ARM with a predominantly docker hosted stack of useful LAB IIOT Tools, but this
+is not a hard requirement. LABStack will work fine on Raspian as well. Arch ARM
+is preferred as it is more up to date and performant, and seems a better fit for
+a LAB environment, YMMV.
 
 In short:
 
@@ -25,7 +25,7 @@ LABStack running on server `labstack` provides
 | influx    | Time series database           | 8086/8083/2003       |
 | telegraf  | System metrics harvester       |                      |
 | grafana   | Time series data visualization | http://labstack:3000 |
-| nodered   | MQTT message swicth            | http://labstack:1880 |
+| nodered   | MQTT message switch            | http://labstack:1880 |
 
 
 ## Portainer
