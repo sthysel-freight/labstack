@@ -1,6 +1,7 @@
 version: '3.4'
 services:
   portainer:
+    container_name: portainer
     image: portainer/portainer
     restart: unless-stopped
     ports:
@@ -10,14 +11,15 @@ services:
       - ./volumes/data/portainer/data:/data
 
   mqtt:
+    container_name: mqtt
     image: eclipse-mosquitto
     restart: unless-stopped
     expose:
       - "1883"
 
   influx:
-    image: "influxdb:latest"
     container_name: influxdb
+    image: "influxdb:latest"
     restart: unless-stopped
     ports:
       - 8086:8086
@@ -30,6 +32,7 @@ services:
       - ./volumes/backups/influx/db:/var/lib/influxdb/backup
 
   telegraf:
+    container_name: telegraf
     image: telegraf
     volumes:
       - ./telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
@@ -38,6 +41,7 @@ services:
       - mqtt
 
   grafana:
+    container_name: grafana
     image: grafana/grafana:6.3.6
     restart: unless-stopped
     user: "0"
@@ -50,6 +54,7 @@ services:
       - ./volumes/grafana/log:/var/log/grafana
 
   nodered:
+    container_name: nodered
     build: ./nodered/.
     restart: unless-stopped
     user: "0"
