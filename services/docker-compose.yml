@@ -71,6 +71,6 @@ services:
     restart: unless-stopped
     user: "0"
     privileged: true
-    env_file: ./rtl_433/rlt_433.env
+    env_file: ./rtl_433/rtl_433.env
     devices:
       - /dev/bus/usb

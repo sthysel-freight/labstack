@@ -27,16 +27,20 @@ This will download all the images and start the various stack services.
 
 Fullstack running on server `fullstack` provides
 
-| Service   | Description                    | Port or URL           |
-|-----------|--------------------------------|-----------------------|
-| portainer | Container management           | http://fullstack:9000 |
-| influx    | Time series database           | 8086/8083/2003        |
-| grafana   | Time series data visualization | http://fullstack:3000 |
-| nodered   | MQTT message switch            | http://fullstack:1880 |
-| mqtt      | MQTT Broker                    | tcp:fullstack:1883    |
-| telegraf  | System metrics harvester       |                       |
+| Service   | Description                         | Port or URL           |
+|-----------|-------------------------------------|-----------------------|
+| portainer | Container management                | http://fullstack:9000 |
+| influx    | Time series database                | 8086/8083/2003        |
+| grafana   | Time series data visualization      | http://fullstack:3000 |
+| nodered   | MQTT message switch                 | http://fullstack:1880 |
+| mqtt      | MQTT Broker                         | tcp:fullstack:1883    |
+| telegraf  | System metrics harvester            |                       |
+| rtl_433   | 433Mhz SDR Dongle message harvester | mqtt                  |
 
-
+With a fullstack system running you have most all infrastructure in place to
+gather, process, visualize and persist data in your home IIOT LAB. Container
+data is persisted in volumes and can be forwarded to a cloud hosted store if
+needed.
 
 ## Portainer
 
@@ -51,6 +55,12 @@ Use portainer to manage individual containers.
 Nodered wired to MQTT allows message management, visualization and processing.
 
 ![PAT](docs/pics/nodered-pat.png)
+
+## rtl_433
+
+If a SDR dongle is plugged into the pi, this service will start harvesting
+433Mhz messages and publish them to mqtt where node-red and grafana will process
+and visualize them. They can also be persisted to the influx database.
 
 # Scratch install
 
