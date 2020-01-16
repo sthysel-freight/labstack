@@ -64,3 +64,13 @@ services:
       - 1880:1880
     volumes:
       - ./volumes/nodered/data:/data
+
+  rtl_433:
+    container_name: rtl_433
+    build: ./rtl_433/.
+    restart: unless-stopped
+    user: "0"
+    privileged: true
+    env_file: ./rtl_433/rlt_433.env
+    devices:
+      - /dev/bus/usb
