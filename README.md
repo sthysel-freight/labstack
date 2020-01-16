@@ -7,14 +7,16 @@ allows the user to get going with current best-of-breed services with minimum
 effort.
 
 FullStack is intended to be deployed on a Raspberry Pi 3 or later running Arch
-ARM Linux. FullStack will work fine on Raspian as well. Arch ARM
-is preferred as it is more up to date and performant, and seems a better fit for
-a LAB environment, YMMV.
+ARM Linux. FullStack works fine on Raspian or any other system running docker as
+well.
+
+Arch ARM is preferred as it is more up to date and performant, and seems a
+better fit for a LAB environment, YMMV.
 
 All services are shipped and managed in docker containers with persistent data
 volumes.
 
-FullStack can be deployed as is on a existing linux machine with docker already
+FullStack can be deployed as is on any existing linux machine with docker already
 installed by
 
  - cloning this repo
@@ -41,6 +43,8 @@ With a fullstack system running you have most all infrastructure in place to
 gather, process, visualize and persist data in your home IIOT LAB. Container
 data is persisted in volumes and can be forwarded to a cloud hosted store if
 needed.
+
+See the [docker-compose](services/docker-compose.yml) file for detail.
 
 ## Portainer
 
