@@ -1,4 +1,4 @@
-# FullStack (Version 0.0.1)
+# FullStack (Version 0.0.2)
 
 ![Full Stack Developer](docs/pics/fullstack.jpg)
 
