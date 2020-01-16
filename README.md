@@ -16,6 +16,8 @@ better fit for a LAB environment, YMMV.
 All services are shipped and managed in docker containers with persistent data
 volumes.
 
+# Usage
+
 FullStack can be deployed as is on any existing linux machine with docker already
 installed by
 
@@ -60,11 +62,45 @@ Nodered wired to MQTT allows message management, visualization and processing.
 
 ![PAT](docs/pics/nodered-pat.png)
 
+The following plugins are available out of the box:
+
+*  node-red-contrib-flightaware
+*  node-red-contrib-alexa-local
+*  node-red-contrib-bigtimer
+*  node-red-contrib-blynk-ws
+*  node-red-contrib-boolean-logic
+*  node-red-contrib-config
+*  node-red-contrib-diode
+*  node-red-contrib-esplogin
+*  node-red-contrib-file-function
+*  node-red-contrib-grove
+*  node-red-contrib-influxdb
+*  node-red-contrib-isonline
+*  node-red-contrib-moment
+*  node-red-contrib-npm
+*  node-red-contrib-owntracks
+*  node-red-contrib-particle
+*  node-red-contrib-ramp-thermostat
+*  node-red-contrib-timeout
+*  node-red-contrib-web-worldmap
+*  node-red-dashboard
+*  node-red-node-darksky
+*  node-red-node-emoncms
+*  node-red-node-geofence
+*  node-red-node-google
+*  node-red-node-openweathermap
+*  node-red-node-pi-gpiod
+*  node-red-node-ping
+*  node-red-node-random
+*  node-red-node-smooth
+*  node-red-node-sqlite
+
 ## rtl_433
 
 If a SDR dongle is plugged into the pi, this service will start harvesting
 433Mhz messages and publish them to mqtt where node-red and grafana will process
 and visualize them. They can also be persisted to the influx database.
+
 
 # Scratch install
 
