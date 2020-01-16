@@ -27,24 +27,28 @@ This will download all the images and start the various stack services.
 
 Fullstack running on server `fullstack` provides
 
-| Service   | Description                    | Port or URL          |
-|-----------|--------------------------------|----------------------|
-| portainer | Container management           | http://labstack:9000 |
-| influx    | Time series database           | 8086/8083/2003       |
-| grafana   | Time series data visualization | http://labstack:3000 |
-| nodered   | MQTT message switch            | http://labstack:1880 |
-| mqtt      | MQTT Broker                    | 1883                 |
-| telegraf  | System metrics harvester       |                      |
+| Service   | Description                    | Port or URL           |
+|-----------|--------------------------------|-----------------------|
+| portainer | Container management           | http://fullstack:9000 |
+| influx    | Time series database           | 8086/8083/2003        |
+| grafana   | Time series data visualization | http://fullstack:3000 |
+| nodered   | MQTT message switch            | http://fullstack:1880 |
+| mqtt      | MQTT Broker                    | tcp:fullstack:1883    |
+| telegraf  | System metrics harvester       |                       |
 
 
 
 ## Portainer
+
+Use portainer to manage individual containers.
 
 ![Portainer Dashboard](docs/pics/portainer-dash.png)
 
 ![Portainer Containers](docs/pics/portainer-containers.png)
 
 ## Nodered
+
+Nodered wired to MQTT allows message management, visualization and processing.
 
 ![PAT](docs/pics/nodered-pat.png)
 
@@ -90,5 +94,5 @@ run the playbook over the pi from another machine with ansible installed do`./pl
 
 ## Start the stack
 
-Once ansible has run to completion start the stack in `~/packstack` by running
+Once ansible has run to completion start the stack in `~/services` by running
 `up.sh`.
