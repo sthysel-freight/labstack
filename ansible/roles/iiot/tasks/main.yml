@@ -12,7 +12,6 @@
       - ansible
       - base-devel
       - curl
-      - docker
       - git
       - htop
       - make
