@@ -1,6 +1,6 @@
 # LABStack (Version 0.0.3)
 
-![Full Stack Developer](docs/pics/labstack.jpg)
+![Full Stack Developer](docs/pics/fullstack.jpg)
 
 LABStack is a curated and managed collection of IoT services and tools. It
 allows the user to get going with current best-of-breed services with minimum
