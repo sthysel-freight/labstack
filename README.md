@@ -46,7 +46,7 @@ gather, process, visualize and persist data in your home IIOT LAB. Container
 data is persisted in volumes and can be forwarded to a cloud hosted store if
 needed.
 
-See the [docker-compose](services/docker-compose.yml) file for detail.
+See the [docker-compose](labstack/docker-compose.yml) file for detail.
 
 ## Portainer
 
