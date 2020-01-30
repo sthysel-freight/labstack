@@ -1,13 +1,13 @@
-# FullStack (Version 0.0.2)
+# LABStack (Version 0.0.2)
 
-![Full Stack Developer](docs/pics/fullstack.jpg)
+![Full Stack Developer](docs/pics/labstack.jpg)
 
-FullStack is a curated and managed collection of IoT services and tools. It
+LABStack is a curated and managed collection of IoT services and tools. It
 allows the user to get going with current best-of-breed services with minimum
 effort.
 
-FullStack is intended to be deployed on a Raspberry Pi 3 or later running Arch
-ARM Linux. FullStack works fine on Raspian or any other system running docker as
+LABStack is intended to be deployed on a Raspberry Pi 3 or later running Arch
+ARM Linux. LABStack works fine on Raspian or any other system running docker as
 well.
 
 Arch ARM is preferred as it is more up to date and performant, and seems a
@@ -29,19 +29,19 @@ This will download all the images and start the various stack services.
 
 # Services
 
-Fullstack running on server `fullstack` provides
+LABStack running on server `labstack` provides
 
 | Service   | Description                         | Port or URL           |
 |-----------|-------------------------------------|-----------------------|
-| portainer | Container management                | http://fullstack:9000 |
+| portainer | Container management                | http://labstack:9000 |
 | influx    | Time series database                | 8086/8083/2003        |
-| grafana   | Time series data visualization      | http://fullstack:3000 |
-| nodered   | MQTT message switch                 | http://fullstack:1880 |
-| mqtt      | MQTT Broker                         | tcp:fullstack:1883    |
+| grafana   | Time series data visualization      | http://labstack:3000 |
+| nodered   | MQTT message switch                 | http://labstack:1880 |
+| mqtt      | MQTT Broker                         | tcp:labstack:1883    |
 | telegraf  | System metrics harvester            |                       |
 | rtl_433   | 433Mhz SDR Dongle message harvester | mqtt                  |
 
-With a fullstack system running you have most all infrastructure in place to
+With a labstack system running you have most all infrastructure in place to
 gather, process, visualize and persist data in your home IIOT LAB. Container
 data is persisted in volumes and can be forwarded to a cloud hosted store if
 needed.
@@ -106,7 +106,7 @@ and visualize them. They can also be persisted to the influx database.
 
 In short:
 
-- install a fullstack host, something like a recent pi
+- install a labstack host, something like a recent pi
 - ansible is used to prep the pi for docker and keep things tight
 - dotfiles to keep the pi environment sane
 - docker-compose is used to maintain the service stack
