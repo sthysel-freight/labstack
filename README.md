@@ -1,4 +1,4 @@
-# LABStack (Version 0.0.2)
+# LABStack (Version 0.0.3)
 
 ![Full Stack Developer](docs/pics/labstack.jpg)
 
@@ -39,7 +39,7 @@ LABStack running on server `labstack` provides
 | nodered   | MQTT message switch                 | http://labstack:1880 |
 | mqtt      | MQTT Broker                         | tcp:labstack:1883    |
 | telegraf  | System metrics harvester            |                       |
-| rtl_433   | 433Mhz SDR Dongle message harvester | mqtt                  |
+| rtl_433   | 433Mhz SDR Dongle message harvester | 	                  |
 
 With a labstack system running you have most all infrastructure in place to
 gather, process, visualize and persist data in your home IIOT LAB. Container
