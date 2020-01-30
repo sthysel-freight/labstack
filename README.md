@@ -1,4 +1,4 @@
-# FullStack (Version 0.0.2)
+# FullStack (Version 0.0.3)
 
 ![Full Stack Developer](docs/pics/fullstack.jpg)
 
@@ -39,7 +39,7 @@ Fullstack running on server `fullstack` provides
 | nodered   | MQTT message switch                 | http://fullstack:1880 |
 | mqtt      | MQTT Broker                         | tcp:fullstack:1883    |
 | telegraf  | System metrics harvester            |                       |
-| rtl_433   | 433Mhz SDR Dongle message harvester | mqtt                  |
+| rtl_433   | 433Mhz SDR Dongle message harvester | 	                  |
 
 With a fullstack system running you have most all infrastructure in place to
 gather, process, visualize and persist data in your home IIOT LAB. Container
