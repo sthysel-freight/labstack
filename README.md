@@ -144,5 +144,5 @@ run the playbook over the pi from another machine with ansible installed do`./pl
 
 ## Start the stack
 
-Once ansible has run to completion start the stack in `~/services` by running
+Once ansible has run to completion start the stack in `~/labstack/labstack/` by running
 `up.sh`.

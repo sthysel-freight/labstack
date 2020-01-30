@@ -3,7 +3,7 @@ services:
   portainer:
     container_name: portainer
     image: portainer/portainer
-    restart: unless-stopped
+    restart: always
     ports:
       - 9000:9000
     volumes:
@@ -13,14 +13,14 @@ services:
   mqtt:
     container_name: mqtt
     image: eclipse-mosquitto
-    restart: unless-stopped
+    restart: always
     expose:
       - "1883"
 
   influx:
     container_name: influxdb
     image: "influxdb:latest"
-    restart: unless-stopped
+    restart: always
     ports:
       - 8086:8086
       - 8083:8083
@@ -43,7 +43,7 @@ services:
   grafana:
     container_name: grafana
     image: grafana/grafana:6.3.6
-    restart: unless-stopped
+    restart: always
     user: "0"
     ports:
       - 3000:3000
@@ -56,7 +56,7 @@ services:
   nodered:
     container_name: nodered
     build: ./nodered/.
-    restart: unless-stopped
+    restart: always
     user: "0"
     privileged: true
     env_file: ./nodered/nodered.env
@@ -68,7 +68,7 @@ services:
   rtl_433:
     container_name: rtl_433
     build: ./rtl_433/.
-    restart: unless-stopped
+    restart: always
     user: "0"
     privileged: true
     env_file: ./rtl_433/rtl_433.env
@@ -87,5 +87,5 @@ services:
     ports:
       - 80:80
       - 443:443
-    restart: unless-stopped
+    restart: always
 
