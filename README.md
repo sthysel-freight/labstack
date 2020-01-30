@@ -60,7 +60,15 @@ Use portainer to manage individual containers.
 
 Nodered wired to MQTT allows message management, visualization and processing.
 
+![RTL 433](docs/pics/rtl_433.png)
+
+The RTL_433 process uses a software defined radio dongle to receive wireless
+sensor traffic on the 433Mhz band, and others, decodes the packets and submits
+data messages to mqtt. Here node red picks up the message, transforms it to
+influxdb line protocol and writes it to the influx time series database.
+
 ![PAT](docs/pics/nodered-pat.png)
+
 
 The following plugins are available out of the box:
 
