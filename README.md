@@ -31,15 +31,15 @@ This will download all the images and start the various stack services.
 
 LABStack running on server `labstack` provides
 
-| Service   | Description                         | Port or URL           |
-|-----------|-------------------------------------|-----------------------|
+| Service   | Description                         | Port or URL          |
+|-----------|-------------------------------------|----------------------|
 | portainer | Container management                | http://labstack:9000 |
-| influx    | Time series database                | 8086/8083/2003        |
+| influx    | Time series database                | 8086/8083/2003       |
 | grafana   | Time series data visualization      | http://labstack:3000 |
 | nodered   | MQTT message switch                 | http://labstack:1880 |
 | mqtt      | MQTT Broker                         | tcp:labstack:1883    |
-| telegraf  | System metrics harvester            |                       |
-| rtl_433   | 433Mhz SDR Dongle message harvester | 	                  |
+| telegraf  | System metrics harvester            |                      |
+| rtl_433   | 433Mhz SDR Dongle message harvester |                      |
 
 With a labstack system running you have most all infrastructure in place to
 gather, process, visualize and persist data in your home IIOT LAB. Container
@@ -56,9 +56,17 @@ Use portainer to manage individual containers.
 
 ![Portainer Containers](docs/pics/portainer-containers.png)
 
+## rtl_433
+
+If a SDR dongle is plugged into the pi, this service will start harvesting
+433Mhz messages and publish them to mqtt where node-red and grafana will process
+and visualize them. They can also be persisted to the influx database.
+
 ## Nodered
 
 Nodered wired to MQTT allows message management, visualization and processing.
+
+### rtl_433 traffic flow
 
 ![RTL 433](docs/pics/rtl_433.png)
 
@@ -67,8 +75,14 @@ sensor traffic on the 433Mhz band, and others, decodes the packets and submits
 data messages to mqtt. Here node red picks up the message, transforms it to
 influxdb line protocol and writes it to the influx time series database.
 
+### External message source
+
 ![PAT](docs/pics/nodered-pat.png)
 
+Feed flows in from any other available sources. Here is a another MQTT data
+source.
+
+### Plugins
 
 The following plugins are available out of the box:
 
@@ -103,11 +117,6 @@ The following plugins are available out of the box:
 *  node-red-node-smooth
 *  node-red-node-sqlite
 
-## rtl_433
-
-If a SDR dongle is plugged into the pi, this service will start harvesting
-433Mhz messages and publish them to mqtt where node-red and grafana will process
-and visualize them. They can also be persisted to the influx database.
 
 
 # Scratch install
@@ -115,7 +124,8 @@ and visualize them. They can also be persisted to the influx database.
 In short:
 
 - install a labstack host, something like a recent pi
-- ansible is used to prep the pi for docker and keep things tight
+- Make use of the optional ansible roles to prep the pi for docker and keep
+  things tight
 - dotfiles to keep the pi environment sane
 - docker-compose is used to maintain the service stack
 
@@ -143,6 +153,12 @@ Like so:
 # useradd -G wheel -m thys
 # pacman -S sudo vim
 # visudo
+```
+
+Change the server name to `labstack` for convenience:
+
+```
+$ sudo hostnamectl set-hostname labstack
 ```
 
 ## Run ansible over pi
