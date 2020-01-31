@@ -132,6 +132,10 @@ If a SDR dongle is plugged into the pi, this service will start harvesting
 433Mhz messages and publish them to mqtt where node-red and grafana will process
 and visualize them. They can also be persisted to the influx database.
 
+## Grafana
+
+![Grafana RTL Prologue](docs/pics/grafana.png)
+
 # Scratch install
 
 In short:
