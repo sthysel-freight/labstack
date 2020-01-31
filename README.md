@@ -26,11 +26,11 @@ installed by
  
 This will download all the images and start the various stack services. 
 
-For notes on prepping a new pi for LABStack on Arch see below. If yo just want
+For notes on prepping a new pi for LABStack on Arch see below. If you just want
 to stick with Raspian (which is perfectly fine), be sure to install docker and
 docker-compose.
 
-![Oi](docs/pics/pi.png)
+![Pi](docs/pics/pi.png)
 
 # Services
 
