@@ -3,8 +3,9 @@
 ![Full Stack Developer](docs/pics/fullstack.jpg)
 
 LABStack is a curated and managed collection of IoT services and tools. The
-stack runs in concert in a containerized environment. It allows the user to get
-going with current best-of-breed services with minimum effort.
+stack runs in concert in a containerized environment, typically on a small lab
+server like a raspberry pi or old laptop. It allows the user to get going with
+current best-of-breed services with minimum effort.
 
 LABStack is intended to be deployed on a Raspberry Pi 3 or later running Arch
 ARM Linux. LABStack works fine on Raspian or any other system running docker as
