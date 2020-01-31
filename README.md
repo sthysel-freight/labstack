@@ -19,7 +19,7 @@ volumes.
 
 # Usage
 
-FullStack can be deployed as is on any existing linux machine with docker already
+LABStack can be deployed as is on any existing linux machine with docker already
 installed by
 
  - cloning this repo
