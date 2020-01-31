@@ -83,11 +83,13 @@ See the [docker-compose](labstack/docker-compose.yml) file for detail.
 
 Heimdall provides a landing page portal that allows you to configure all your
 interesting landing pages once so you do not have to remember on which port each
-service resides.
+service lives. Essentially a bookmarks service with some extra support for
+specific services.
 
 To get to a specific service browse to http://labstack and click on the relevant
 service icon. See below on how to rename a typical raspberry pi based LABStack
-server.
+server. Add those you deem fit and perhaps other links you need quick access to,
+things you'll typically find in your browser's bookmarks.
 
 ## Portainer
 
