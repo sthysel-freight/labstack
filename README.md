@@ -4,12 +4,12 @@
 
 LABStack is a curated and managed collection of IoT services and tools. The
 stack runs in concert in a containerized environment, typically on a small lab
-server like a raspberry pi or old laptop. It allows the user to get going with
+server like a raspberry pi or old laptop. It allows you to get going with
 current best-of-breed services with minimum effort.
 
 LABStack is intended to be deployed on a Raspberry Pi 3 or later running Arch
-ARM Linux. LABStack works fine on Raspian or any other system running docker as
-well.
+ARM Linux. LABStack works fine on Raspian or most other system running a recent
+docker.
 
 Arch ARM is preferred as it is more up to date and performant, and seems a
 better fit for a LAB environment, YMMV.
@@ -17,10 +17,10 @@ better fit for a LAB environment, YMMV.
 All services are shipped and managed in docker containers with persistent data
 volumes.
 
-# Usage
+# Deploy
 
 LABStack can be deployed as is on any existing linux machine with docker already
-installed by
+installed by:
 
  - cloning this repo
  - run `./up.sh` in the `services` directory
@@ -32,6 +32,28 @@ to stick with Raspian (which is perfectly fine), be sure to install docker and
 docker-compose.
 
 ![Pi](docs/pics/pi.png)
+
+# Usage
+
+LABStack makes common IoT services available out of the box, but it does not set
+up databases or flows, as these would be relatively unique for each environment.
+It can be the basis of your own more specific stack of course. 
+
+Once the stack is up you can 
+
+- start adding flows from your data sources
+- persist data to influxdb
+- visualize your stored data in Grafana
+
+The persistent volumes will keep your flows and data and other configs intact
+between stack and server drops. Be sure to backup your volumes to keep your data
+save, if that is important to you. 
+
+Typically you would make a bespoke system, perhaps based on LABStack for
+'production' flows once you have figured out what you want to do using LABStack,
+and then migrate that stack to something more permanent and dedicated to that
+task. In which case volume, flow and data permanence aught to get proper
+attention, perhaps.
 
 # Services
 
