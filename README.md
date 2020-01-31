@@ -57,8 +57,9 @@ Heimdall provides a landing page portal that allows you to configure all your
 interesting landing pages once so you do not have to remember on which port each
 service resides.
 
-Just browse to [LABStack](http://labstack) and click on the relevant service
-icon.
+To get to a specific service browse to http://labstack and click on the relevant
+service icon. See below on how to rename a typical raspberry pi based LABStack
+server.
 
 ## Portainer
 
