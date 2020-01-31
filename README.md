@@ -83,6 +83,30 @@ sensor traffic on the 433Mhz band, and others, decodes the packets and submits
 data messages to mqtt. Here node red picks up the message, transforms it to
 influxdb line protocol and writes it to the influx time series database.
 
+The function node example here transforms the rtl_433 message to something the
+influx write node understands:
+
+``` javascript
+msg.topic="Prologue";
+var orig = msg.payload;
+
+msg.payload = [
+    {
+        temperature:orig.temperature_C,
+        humidity:orig.humidity,
+    },
+    {
+        battery:orig.battery,
+        id:orig.id,
+        rid:orig.rid,
+        channel:orig.channel,
+        model:orig.model,
+    },
+];
+
+return msg; 
+```
+
 ### External message source
 
 ![PAT](docs/pics/nodered-pat.png)
