@@ -33,6 +33,7 @@ LABStack running on server `labstack` provides
 
 | Service   | Description                         | Port or URL          |
 |-----------|-------------------------------------|----------------------|
+| heimdall  | Service portal                      | http://labstack      |
 | portainer | Container management                | http://labstack:9000 |
 | influx    | Time series database                | 8086/8083/2003       |
 | grafana   | Time series data visualization      | http://labstack:3000 |
@@ -47,6 +48,17 @@ data is persisted in volumes and can be forwarded to a cloud hosted store if
 needed.
 
 See the [docker-compose](labstack/docker-compose.yml) file for detail.
+
+## Heimdall
+
+![Heindall Portal](docs/pics/heimdall.png)
+
+Heimdall provides a landing page portal that allows you to configure all your
+interesting landing pages once so you do not have to remember on which port each
+service resides.
+
+Just browse to [LABStack](http://labstack) and click on the relevant service
+icon.
 
 ## Portainer
 
