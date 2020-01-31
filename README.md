@@ -30,6 +30,7 @@ For notes on prepping a new pi for LABStack on Arch see below. If yo just want
 to stick with Raspian (which is perfectly fine), be sure to install docker and
 docker-compose.
 
+![Oi](docs/pics/pi.png)
 
 # Services
 
