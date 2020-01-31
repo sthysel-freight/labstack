@@ -37,7 +37,7 @@ LABStack running on server `labstack` provides
 | portainer | Container management                | http://labstack:9000 |
 | influx    | Time series database                | 8086/8083/2003       |
 | grafana   | Time series data visualization      | http://labstack:3000 |
-| nodered   | MQTT message switch                 | http://labstack:1880 |
+| node-red  | IIOT message switch                 | http://labstack:1880 |
 | mqtt      | MQTT Broker                         | tcp:labstack:1883    |
 | telegraf  | System metrics harvester            |                      |
 | rtl_433   | 433Mhz SDR Dongle message harvester |                      |
@@ -68,13 +68,8 @@ Use portainer to manage individual containers.
 
 ![Portainer Containers](docs/pics/portainer-containers.png)
 
-## rtl_433
 
-If a SDR dongle is plugged into the pi, this service will start harvesting
-433Mhz messages and publish them to mqtt where node-red and grafana will process
-and visualize them. They can also be persisted to the influx database.
-
-## Nodered
+## Node-red
 
 Nodered wired to MQTT allows message management, visualization and processing.
 
@@ -130,6 +125,11 @@ The following plugins are available out of the box:
 *  node-red-node-sqlite
 
 
+## rtl_433
+
+If a SDR dongle is plugged into the pi, this service will start harvesting
+433Mhz messages and publish them to mqtt where node-red and grafana will process
+and visualize them. They can also be persisted to the influx database.
 
 # Scratch install
 
