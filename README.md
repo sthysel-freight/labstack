@@ -25,7 +25,9 @@ installed by:
  - cloning this repo
  - run `./up.sh` in the `services` directory
  
-This will download all the images and start the various stack services. 
+This will download all the images and start the various stack services. All
+services in the stack have the restart 'always' restart policy so docker will
+automatically start the containers after a reboot.
 
 For notes on prepping a new pi for LABStack on Arch see below. If you just want
 to stick with Raspian (which is perfectly fine), be sure to install docker and
@@ -88,12 +90,17 @@ specific services.
 
 To get to a specific service browse to http://labstack and click on the relevant
 service icon. See below on how to rename a typical raspberry pi based LABStack
-server. Add those you deem fit and perhaps other links you need quick access to,
-things you'll typically find in your browser's bookmarks.
+server. 
+
+Add links to LABStack services you deem fit and perhaps other links you need
+quick access to, things you'll typically find in your browser's bookmarks.
 
 ## Portainer
 
-Use portainer to manage individual containers.
+Use portainer to manage the individual stack service containers. You can add
+other services as well. Be sure to add new services to
+[docker-compose.yml](labstack/docker-compose.yml) with a 'always' restart policy
+if the service needs to be pulled up with the rest of the stack.
 
 ![Portainer Dashboard](docs/pics/portainer-dash.png)
 
