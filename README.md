@@ -160,6 +160,10 @@ and visualize them. They can also be persisted to the influx database.
 
 ![Grafana RTL Prologue](docs/pics/grafana.png)
 
+Grafana is used to visualize data available from the influxdb and others. In
+this example the RTL 433 data from the SDR dongle that was persisted to the
+influx database is displayed.
+
 # Scratch install
 
 In short:
