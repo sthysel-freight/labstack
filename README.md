@@ -144,6 +144,19 @@ msg.payload = [
 return msg; 
 ```
 
+### Node red dashboard
+
+Node red's Dashboard facility is fine for quick gauges and graphs if Influx +
+Grafana is unnecessary. Why not both ?
+
+Specify dash flows using the dashboard widgets
+
+![PAT](docs/pics/rtl-node-red-dash-flow.png)
+
+Resulting in a simple Gauge Dashboard on http://labstack:1880/ui like so:
+
+![PAT](docs/pics/rtl-node-red-dashboard.png)
+
 ### External message source
 
 ![PAT](docs/pics/nodered-pat.png)
