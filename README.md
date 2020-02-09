@@ -1,4 +1,4 @@
-# LABStack (Version 0.0.3)
+# LABStack (Version 0.0.4)
 
 ![Full Stack Developer](docs/pics/fullstack.jpg)
 
