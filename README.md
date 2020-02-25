@@ -1,37 +1,54 @@
-# LABStack (Version 0.0.4)
+# LABStack (Version 0.0.5)
 
 ![Full Stack Developer](docs/pics/fullstack.jpg)
 
 LABStack is a curated and managed collection of IoT services and tools. The
-stack runs in concert in a containerized environment, typically on a small lab
-server like a raspberry pi or old laptop. It allows you to get going with
+stack runs in concert in a containerized environment, typically on a small
+compute node like a raspberry pi or old laptop. It allows you to get going with
 current best-of-breed services with minimum effort.
 
-LABStack is intended to be deployed on a Raspberry Pi 3 or later running Arch
-ARM Linux. LABStack works fine on Raspian or most other system running a recent
-docker.
+LABStack is also as embedded edge-compute stream processing framework. Messages
+are ingested from various sources like attached sensors, remote services and the
+local mqtt message bus. Messages are read, processed and published around the
+common message bus, and results disseminated via mqtt, node red or any other
+local process. The principle is that message plumbing and processing facilities
+are common standard commodities allowing the user to focus on data content and
+meaning.
 
-Arch ARM is preferred as it is more up to date and performant, and seems a
-better fit for a LAB environment, YMMV.
+LABStack is intended to be deployed on a Raspberry Pi3 or later running
+[Archlinux|ARM](https://archlinuxarm.org/). LABStack also works fine on Raspian
+or most other system running a recent docker.
+[Archlinux|ARM](https://archlinuxarm.org/) is preferred as it is more up to date
+and performant, and seems a better fit for a LAB environment, YMMV. Simple
+Ansible playbooks are available in the repo to assist with the build-out of the
+LABStack hosting compute node.
 
 All services are shipped and managed in docker containers with persistent data
 volumes.
 
+
 # Deploy
 
-LABStack can be deployed as is on any existing linux machine with docker already
+LABStack can be deployed as-is on any existing linux machine with docker already
 installed by:
 
  - cloning this repo
  - run `./up.sh` in the `services` directory
  
-This will download all the images and start the various stack services. All
-services in the stack have the restart 'always' restart policy so docker will
+This will download all the images and start the various services. All services
+in the stack have the restart 'always' restart policy so docker will
 automatically start the containers after a reboot.
 
-For notes on prepping a new pi for LABStack on Arch see below. If you just want
+For notes on prepping a new Pi for LABStack on Arch see below. If you just want
 to stick with Raspian (which is perfectly fine), be sure to install docker and
 docker-compose.
+
+```zsh
+$ sudo apt-get install docker docker-compose
+```
+
+Be sure to add the main user to the `docker` group to avoid starting the stack
+as root.
 
 ![Pi](docs/pics/pi.png)
 
@@ -44,8 +61,10 @@ It can be the basis of your own more specific stack of course.
 Once the stack is up you can 
 
 - start adding flows from your data sources
+- make realtime/current flow visualizations in node-red dashboard
 - persist data to influxdb
 - visualize your stored data in Grafana
+- 
 
 The persistent volumes will keep your flows and data and other configs intact
 between stack and server drops. Be sure to backup your volumes to keep your data

@@ -790,7 +790,7 @@
   },
   "node-red-contrib-particle": {
    "name": "node-red-contrib-particle",
-   "version": "1.1.0",
+   "version": "1.1.5",
    "local": false,
    "nodes": {
     "particle": {
@@ -846,7 +846,7 @@
   },
   "node-red-contrib-web-worldmap": {
    "name": "node-red-contrib-web-worldmap",
-   "version": "2.2.0",
+   "version": "2.2.1",
    "local": false,
    "nodes": {
     "worldmap": {
@@ -866,7 +866,7 @@
   },
   "node-red-dashboard": {
    "name": "node-red-dashboard",
-   "version": "2.19.2",
+   "version": "2.19.3",
    "local": false,
    "nodes": {
     "ui_base": {
@@ -1083,7 +1083,7 @@
   },
   "node-red-node-darksky": {
    "name": "node-red-node-darksky",
-   "version": "0.1.18",
+   "version": "0.1.19",
    "local": false,
    "nodes": {
     "darksky": {
@@ -1138,7 +1138,7 @@
   },
   "node-red-node-google": {
    "name": "node-red-node-google",
-   "version": "0.1.4",
+   "version": "0.2.1",
    "local": false,
    "nodes": {
     "google plus": {
