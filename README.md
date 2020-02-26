@@ -7,13 +7,13 @@ stack runs in concert in a containerized environment, typically on a small
 compute node like a raspberry pi or old laptop. It allows you to get going with
 current best-of-breed services with minimum effort.
 
-LABStack is also as embedded edge-compute stream processing framework. Messages
+LABStack is also a embedded edge-compute stream processing framework. Messages
 are ingested from various sources like attached sensors, remote services and the
-local mqtt message bus. Messages are read, processed and published around the
+local mqtt message bus. Messages are read, processed and published using the
 common message bus, and results disseminated via mqtt, node red or any other
 local process. The principle is that message plumbing and processing facilities
 are common standard commodities allowing the user to focus on data content and
-meaning.
+information extraction.
 
 LABStack is intended to be deployed on a Raspberry Pi3 or later running
 [Archlinux|ARM](https://archlinuxarm.org/). LABStack also works fine on Raspian
