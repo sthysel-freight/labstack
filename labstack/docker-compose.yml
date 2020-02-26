@@ -81,7 +81,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Europe/London
+      - TZ=Australia/Perth
     volumes:
       - ./volumes/heimdall:/config
     ports:
