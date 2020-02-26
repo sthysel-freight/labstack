@@ -61,10 +61,10 @@ It can be the basis of your own more specific stack of course.
 Once the stack is up you can 
 
 - start adding flows from your data sources
+- do message stream processing
 - make realtime/current flow visualizations in node-red dashboard
 - persist data to influxdb
 - visualize your stored data in Grafana
-- 
 
 The persistent volumes will keep your flows and data and other configs intact
 between stack and server drops. Be sure to backup your volumes to keep your data
