@@ -42,13 +42,19 @@ services:
 
   grafana:
     container_name: grafana
-    image: grafana/grafana:6.3.6
+    image: grafana/grafana
     restart: always
     user: "0"
     ports:
       - 3000:3000
-    env_file:
-      - ./grafana/grafana.env
+    environment:
+      - TZ=Australia/Perth
+      - GF_PATHS_DATA=/var/lib/grafana
+      - GF_PATHS_LOGS=/var/log/grafana
+      #- GF_SERVER_ROOT_URL=http://localhost:3000/grafana
+      #- GF_SERVER_SERVE_FROM_SUB_PATH=true
+      #- GF_SECURITY_ADMIN_USER=admin
+      #- GF_SECURITY_ADMIN_PASSWORD=admin
     volumes:
       - ./volumes/grafana/data:/var/lib/grafana
       - ./volumes/grafana/log:/var/log/grafana
