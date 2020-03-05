@@ -4,7 +4,6 @@ FROM nodered/node-red:latest
 # node-red-contrib-home-assistant-websoc
 
 RUN npm install \
-  node-red-contrib-flightaware \
   node-red-contrib-alexa-local \
   node-red-contrib-bigtimer \
   node-red-contrib-blynk-ws \
@@ -13,6 +12,7 @@ RUN npm install \
   node-red-contrib-diode \
   node-red-contrib-esplogin \
   node-red-contrib-file-function \
+  node-red-contrib-flightaware \
   node-red-contrib-grove \
   node-red-contrib-influxdb \
   node-red-contrib-isonline \
@@ -20,6 +20,7 @@ RUN npm install \
   node-red-contrib-npm \
   node-red-contrib-owntracks \
   node-red-contrib-particle \
+  node-red-contrib-python3-function \
   node-red-contrib-ramp-thermostat \
   node-red-contrib-timeout \
   node-red-contrib-web-worldmap \
